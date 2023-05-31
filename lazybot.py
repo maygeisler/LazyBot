@@ -98,7 +98,7 @@ comments = sorted(comments, key=lambda d: d["score"], reverse=True)
 # Generate article
 
 # %%
-promt = f"Write a newspaer article about a reddit post with the title: {pickedPost.title}, posted by {pickedPost.author}; here are some comments people made on that post: "
+promt = f"Write a newspaper article about a reddit post with the title: {pickedPost.title}, posted by {pickedPost.author}; here are some comments people made on that post: "
 for comment in comments[0:5]:
     promt += f"{comment['author']} wrote { comment['comment'] }; "
 print(f"Promt: {promt}")
